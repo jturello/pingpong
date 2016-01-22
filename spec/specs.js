@@ -19,5 +19,10 @@ describe('pingpong', function() {
     expect(pingpong(-1)).to.equal('Invalid entry. Please enter positive integers only.');
   });
 
+  it("stips off decimals converting floats entered by the user to integers and continues to process accordingly", function() {
+    expect(pingpong(3.222)).to.equal('1,2,ping');
+  });
+
+
 
 });
