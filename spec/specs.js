@@ -14,4 +14,10 @@ describe('pingpong', function() {
   it("returns 'pingpong' in place of numbers divisible by 15 in generatedNumberList", function(){
     expect(pingpong(15)).to.equal('1,2,ping,4,pong,ping,7,8,ping,pong,11,ping,13,14,pingpong');
   });
+
+  it("returns error message 'invalid entry. please enter positive integers only.'", function(){
+    expect(pingpong(-1)).to.equal('invalid entry. please enter positive integers only.');
+  });
+
+  
 });
