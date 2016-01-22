@@ -3,7 +3,11 @@ describe('pingpong', function() {
     expect(pingpong(2)).to.equal('1,2');
   });
 
-  it("displays 'ping' in place of any number in the generatedNumberList that is a multiple of 3", function() {
+  it("displays 'ping' in place of numbers divisible by 3 in generatedNumberList", function() {
     expect(pingpong(3)).to.equal('1,2,ping');
+  });
+
+  it("returns 'pong' in place of numbers divisible by 5 in generatedNumberList", function() {
+    expect(pingpong(5)).to.equal('1,2,ping,4,pong');
   });
 });
