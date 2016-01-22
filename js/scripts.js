@@ -1,22 +1,24 @@
 var pingpong = function(userNumber) {
 
-    var generatedNumberList = [];
+  var userInteger = parseInt(userNumber);
 
-    if((userNumber<1) || ((typeof userNumber) != "number")){
-      return "Invalid entry. Please enter positive integers only.";
+  var generatedNumberList = [];
+
+  if((userInteger<1) || isNaN(parseInt(userNumber))){
+    return "Invalid entry. Please enter positive integers only.";
+  }
+
+  for(var i=1; i <= userInteger; i++){
+
+    if ((i%3===0) && (i%5===0)){
+      generatedNumberList.push('pingpong');
+    } else if((i%3 === 0) && !(i%5===0)){
+      generatedNumberList.push('ping');
+    } else if ((i%5 === 0) && !(i%3===0)){
+      generatedNumberList.push('pong');
+    } else {
+      generatedNumberList.push(i);
     }
-
-    for(var i=1; i <= userNumber; i++){
-
-      if ((i%3===0) && (i%5===0)){
-        generatedNumberList.push('pingpong');
-      } else if((i%3 === 0) && !(i%5===0)){
-        generatedNumberList.push('ping');
-      } else if ((i%5 === 0) && !(i%3===0)){
-        generatedNumberList.push('pong');
-      } else {
-        generatedNumberList.push(i);
-      }
-    }
-    return generatedNumberList.join();
-  };
+  }
+  return generatedNumberList.join();
+};

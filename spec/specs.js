@@ -24,7 +24,7 @@ describe('pingpong', function() {
   });
 
   it("returns error message 'Invalid entry. Please enter positive integers only.' when the user enters a string", function(){
-    expect(pingpong('string')).to.equal('Invalid entry. Please enter positive integers only.');
+    expect(pingpong("string")).to.equal('Invalid entry. Please enter positive integers only.');
   });
 
 });
