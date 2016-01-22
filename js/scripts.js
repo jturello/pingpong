@@ -2,7 +2,7 @@ var pingpong = function(userNumber) {
 
     var generatedNumberList = [];
 
-    if(userNumber<1){
+    if((userNumber<1) || ((typeof userNumber) != "number")){
       return "Invalid entry. Please enter positive integers only.";
     }
 
