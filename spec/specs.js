@@ -15,7 +15,7 @@ describe('pingpong', function() {
     expect(pingpong(15)).to.equal('1,2,ping,4,pong,ping,7,8,ping,pong,11,ping,13,14,pingpong');
   });
 
-  it("returns error message 'invalid entry. please enter positive integers only.'", function(){
+  it("returns error message 'Invalid entry. Please enter positive integers only.'", function(){
     expect(pingpong(-1)).to.equal('Invalid entry. Please enter positive integers only.');
   });
 
@@ -23,6 +23,8 @@ describe('pingpong', function() {
     expect(pingpong(3.222)).to.equal('1,2,ping');
   });
 
-
+  it("returns error message 'Invalid entry. Please enter positive integers only.'", function(){
+    expect(pingpong('string')).to.equal('Invalid entry. Please enter positive integers only.');
+  });
 
 });
