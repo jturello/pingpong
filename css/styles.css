@@ -1,0 +1,65 @@
+.page-header {
+  background-color: mediumseagreen;
+  /*background-image: url("../images/pingpongvegas.jpeg");*/
+  /*background-size: cover;*/
+  color: #ffff99;
+  text-align: center;
+  height: 100px;
+  vertical-align: text-top;
+  border:1px solid #2b4f6e;
+  margin-bottom: -2px;
+}
+
+.row {
+  margin: 0px;
+}
+
+.canvas {
+  padding: 10px;
+}
+
+#right-canvas {
+  border: 1px solid slategrey;
+  background-color: lemonchiffon;
+}
+
+#left-canvas {
+  border: 1px solid slategrey;
+  background-color: lightgrey;
+}
+
+.panel {
+  margin-top: 20px;
+  border: 1px solid darkgray;
+}
+
+.panel-body {
+  background-color: khaki;
+}
+
+.rigth-inner-top {
+  color: dimgray;
+}
+
+h2, h4 {
+  color: crimson;
+}
+
+li, #rules-text {
+  color: royalblue;
+}
+
+#bottom-row {
+  background-color: lemonchiffon;
+  border: 1px solid slategrey;
+}
+
+#left-canvas {
+  padding-bottom: 192px;
+}
+/*.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}*/
