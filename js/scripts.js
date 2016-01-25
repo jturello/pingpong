@@ -4,10 +4,6 @@ var pingpong = function(userNumber) {
 
   var generatedNumberList = [];
 
-  if((userInteger<1) || isNaN(parseInt(userNumber))){
-    return "Invalid entry. Please enter positive integers only.";
-  }
-
   for(var i=1; i <= userInteger; i++){
 
     if ((i%3===0) && (i%5===0)){
@@ -20,5 +16,31 @@ var pingpong = function(userNumber) {
       generatedNumberList.push(i);
     }
   }
-  return generatedNumberList.join();
+  return generatedNumberList;
 };
+
+$(document).ready(function() {
+
+  $("button#btnSubmit").click(function(event) {
+    $("#output").empty();
+
+    var userEntry = parseInt($(numberInputField).val());
+
+      $("#submitForm")[0].reset();
+
+      if((userEntry<1) || isNaN(parseInt(userEntry))){
+        console.log("Invalid entry. Please enter positive integers only.");
+        $("#submitForm")[0].reset();
+        return;
+    }
+
+    var resultArray = pingpong(userEntry);
+
+    for (var i = 0; i < resultArray.length; i++){
+      $("ul#output").append("<li>" + resultArray[i] +  " " + "</li>");
+    }
+
+    event.preventDefault();
+
+    });
+});
