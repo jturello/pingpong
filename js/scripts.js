@@ -22,25 +22,33 @@ var pingpong = function(userNumber) {
 $(document).ready(function() {
 
   $("button#btnSubmit").click(function(event) {
-    $("#output").empty();
+     $("#output").empty();
 
-    var userEntry = parseInt($(numberInputField).val());
+     var userEntry = parseInt($(numberInputField).val());
+     console.log(userEntry);
+     $("#submitForm")[0].reset();
 
-      $("#submitForm")[0].reset();
+    //  if((userEntry<1) || isNaN(parseInt(userEntry))){
+     if((userEntry<1) || isNaN(userEntry)){       
+       // console.log("Invalid entry. Please enter positive integers only.");
+      //  $("#submitForm")[0].reset();
+       // return -1;
+       alert('in if - append error msg next line');
+       $("ul#output").append("<li>Invalid entry. Please enter positive integers only.</li>");
+      //  return;
+      } else {
+          var resultArray = pingpong(userEntry);
 
-      if((userEntry<1) || isNaN(parseInt(userEntry))){
-        console.log("Invalid entry. Please enter positive integers only.");
-        $("#submitForm")[0].reset();
-        return;
-    }
+          for (var i = 0; i < resultArray.length; i++){
+            $("ul#output").append("<li>" + resultArray[i] +  " " + "</li>");
+          }
+        }
 
-    var resultArray = pingpong(userEntry);
+     event.preventDefault();
 
-    for (var i = 0; i < resultArray.length; i++){
-      $("ul#output").append("<li>" + resultArray[i] +  " " + "</li>");
-    }
-
-    event.preventDefault();
+    // if (resultArray === -1) {
+    //   $("ul#output").append("<li>Invalid entry. Please enter positive integers only.</li>");
+    // }
 
     });
 });
