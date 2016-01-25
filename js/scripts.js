@@ -25,15 +25,15 @@ $(document).ready(function() {
      $("#output").empty();
 
      var userEntry = parseInt($(numberInputField).val());
-     console.log(userEntry);
+    //  console.log(userEntry);
      $("#submitForm")[0].reset();
 
     //  if((userEntry<1) || isNaN(parseInt(userEntry))){
-     if((userEntry<1) || isNaN(userEntry)){       
+     if((userEntry<1) || isNaN(userEntry)){
        // console.log("Invalid entry. Please enter positive integers only.");
       //  $("#submitForm")[0].reset();
        // return -1;
-       alert('in if - append error msg next line');
+      //  alert('in if - append error msg next line');
        $("ul#output").append("<li>Invalid entry. Please enter positive integers only.</li>");
       //  return;
       } else {
