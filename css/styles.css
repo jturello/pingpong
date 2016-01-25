@@ -1,13 +1,15 @@
 .page-header {
   background-color: mediumseagreen;
-  /*background-image: url("../images/pingpongvegas.jpeg");*/
-  /*background-size: cover;*/
-  color: #ffff99;
+  color: #fff380;
   text-align: center;
   height: 100px;
   vertical-align: text-top;
   border:1px solid #2b4f6e;
   margin-bottom: -2px;
+}
+
+#header h1 {
+  font-size: 40px;
 }
 
 .row {
@@ -16,34 +18,82 @@
 
 .canvas {
   padding: 10px;
+  border: 1px solid darkgray;
+  background: lemonchiffon;
+  font-size: 15.5;
+}
+
+.lightgrey-border-thin {
+  border: 1px solid darkgrey;
 }
 
 #right-canvas {
-  border: 1px solid slategrey;
-  background-color: lemonchiffon;
+  font-size: 15.5px;
 }
 
 #left-canvas {
-  border: 1px solid slategrey;
+  border: 1px solid black;
   background-color: lightgrey;
 }
+
+#left-canvas p {
+  margin-left: 15px;
+}
+
+label {
+  font-size: 18px;
+  color: crimson;
+}
+
+.btn {
+  color: yellow;
+  font-size: 16px;
+  background-color: mediumseagreen;
+}
+
+#numberInputField {
+  background-color: lightgrey;
+}
+
 
 .panel {
   margin-top: 20px;
   border: 1px solid darkgray;
+  font-size: inherit;
 }
 
 .panel-body {
   background-color: khaki;
+  font-size: 16px;
+  color: royalblue;
 }
 
 .rigth-inner-top {
   color: dimgray;
 }
 
+h1 {
+  font-size: 15px;
+  color: l
+}
+
 h2, h4 {
   color: crimson;
 }
+
+#bottom-row h3 {
+  text-align: right;
+  color: cadetblue;
+}
+
+#output li {
+  display: inline;
+  list-style-type: none;
+  padding-left: 0px;
+  -webkit-padding-start: 0px;
+}
+
+
 
 li, #rules-text {
   color: royalblue;
@@ -54,12 +104,6 @@ li, #rules-text {
   border: 1px solid slategrey;
 }
 
-#left-canvas {
-  padding-bottom: 192px;
+.row-eq-height {
+  display: flex;
 }
-/*.row-eq-height {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display:         flex;
-}*/
